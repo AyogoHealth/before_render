@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class SampleController < ActionController::Base   
-  before_filter :action_one
-  after_filter :action_three
+  before_action :action_one
+  after_action :action_three
   before_render :action_two, :except => [:new]
   skip_before_render :action_two, :only => [:show]
   
